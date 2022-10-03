@@ -1,8 +1,10 @@
 
 var url = window.location.href;
+var swLocation = '/twittor/sw.js';//produccion del que se subio a github
+
 if ( navigator.serviceWorker ) {
 
-    if ( url.includes('localhost') ) {
+    if ( url.includes('localhost') ) {//desarrollo de pruebas
         swLocation = '/sw.js';
     }
     navigator.serviceWorker.register( swLocation );
